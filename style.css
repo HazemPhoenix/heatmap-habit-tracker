@@ -1,0 +1,29 @@
+body {
+  background-color: #0f172a;
+}
+.year {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 25vh;
+  margin: auto;
+  justify-content: end;
+}
+/* .month {
+  width: calc(100% / 12 - 2px);
+  height: calc(100% / 2);
+  margin: 2px;
+  background-color: rgb(70, 7, 208);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+} */
+
+.entry {
+  width: calc(100% / 53 - 5px);
+  height: calc(100% / 7 - 5px);
+  border: 0.5px solid #1d2846;
+  background-color: #1a243d3e;
+  margin: 2px;
+  border-radius: 2px;
+}
