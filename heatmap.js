@@ -1,7 +1,31 @@
 const containers = document.getElementsByClassName("year");
-let entries = [];
 let divs = document.getElementsByClassName("entry");
+const newHabitButton = document.getElementById("addNewHabit");
+const newHabitForm = document.getElementById("newHabitForm");
+const overlay = document.getElementById("overlay");
+const formButton = document.getElementById("formButton");
+
+let habits = [];
+let entries = [];
 Entry.highestWeightEntry = null;
+
+newHabitButton.addEventListener("click", function (e) {
+  overlay.style.display = "block";
+  newHabitForm.style.visibility = "visible";
+  newHabitForm.style.zIndex = 3;
+  overlay.addEventListener("click", function () {
+    overlay.style.display = "none";
+    newHabitForm.style.visibility = "hidden";
+  });
+});
+
+formButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  overlay.style.display = "none";
+  newHabitForm.style.visibility = "hidden";
+});
+
+habits.forEach((habit) => {});
 for (let i = 0; i < 365; i++) {
   entries.push(new Entry("entry", 0));
   let div = document.createElement("div");
@@ -67,3 +91,20 @@ Entry.updateWeights = function () {
     }
   });
 };
+
+function Habit(name, trackingStyle) {
+  Object.defineProperties(this, {
+    name: {
+      value: name,
+      writable: true,
+    },
+    trackingStyle: {
+      value: trackingStyle,
+      writable: false,
+    },
+    entries: {
+      value: new Array(365),
+      writable: true,
+    },
+  });
+}

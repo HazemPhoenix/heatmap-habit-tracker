@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="overlay"></div>
+    <button id="addNewHabit">New Habit</button>
     <div class="year">
       <!-- <div class="month"></div>
       <div class="month"></div>
@@ -21,6 +23,36 @@
       <div class="month"></div>
       <div class="month"></div> -->
     </div>
+
+    <form action="" id="newHabitForm" style="visibility: hidden">
+      <table>
+        <tr>
+          <td>
+            <label for="habitName">Name: </label>
+          </td>
+          <td colspan="2">
+            <input type="text" id="habitName" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="habitTrackingStyle">Tracking Style: </label>
+          </td>
+          <td colspan="2">
+            <select name="habitTrackingStyle" id="habitTrackingStyle">
+              <option value="numerical">Numerical value (i.e. Minutes)</option>
+              <option value="YesOrNo">Done/Not Done</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button id="formButton">Add Habit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
     <script src="heatmap.js"></script>
   </body>
 </html>
