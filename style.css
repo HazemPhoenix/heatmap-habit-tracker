@@ -1,35 +1,51 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.795);
 }
 body {
   background-color: #0f172a;
 }
-.year {
+.heatmap {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 80vw;
-  height: 25vh;
-  margin: 2em auto;
-  justify-content: end;
+  width: 100%;
+  height: 60%;
+  margin: 1em auto;
+  justify-content: baseline;
 }
-/* .month {
-  width: calc(100% / 12 - 2px);
-  height: calc(100% / 2);
-  margin: 2px;
-  background-color: rgb(70, 7, 208);
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px;
-} */
-
 .entry {
-  width: calc(100% / 53 - 5px);
-  height: calc(100% / 7 - 5px);
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0.1em;
   border: 0.5px solid #1d2846;
   background-color: #1a243d3e;
-  margin: 2px;
   border-radius: 2px;
+}
+.habitContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 40vh;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  background-color: #1a243d3e;
+  border: 1px solid rgba(255, 255, 255, 0.078);
+}
+
+.habitName {
+  font-size: 1.5rem;
+}
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  display: inline;
 }
 
 .entry:hover {
@@ -73,14 +89,14 @@ td[colspan="2"] {
 }
 
 form {
-  position: relative;
+  position: fixed;
   color: white;
   background-color: #1e2d52;
   border-radius: 1em;
   width: fit-content;
   height: fit-content;
   padding: 1em;
-  margin: auto;
+  left: 35%;
 }
 
 form button {
