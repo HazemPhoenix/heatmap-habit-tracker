@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Habit Tracker</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,6 +35,28 @@
           <td colspan="3">
             <button id="formButton">Add Habit</button>
           </td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="" id="newEntry" style="display: none">
+      <table>
+        <tr>
+          <td colspan="7" id="entryHabitName"></td>
+        </tr>
+        <tr>
+          <td colspan="1"><span id="dateName">Date: </span></td>
+          <td colspan="6"><span id="dateValue"></span></td>
+        </tr>
+        <tr>
+          <td colspan="1"><label for="minutes">Minutes</label></td>
+          <td colspan="6"><input type="number" min="0" id="minutes" /></td>
+        </tr>
+        <tr>
+          <td colspan="1" id="currentStreakName">Current Streak:</td>
+          <td colspan="1" id="currentStreakValue"></td>
+          <td colspan="4"></td>
+          <td colspan="3"><button id="saveEntry">Save</button></td>
         </tr>
       </table>
     </form>

@@ -10,8 +10,10 @@ body {
 .heatmap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 85%;
+  row-gap: 5px;
   height: 60%;
   margin: 1em auto;
   justify-content: baseline;
@@ -19,7 +21,7 @@ body {
 .entry {
   width: 0.75em;
   height: 0.75em;
-  margin: 0.1em;
+  margin: 0.07em 0;
   border: 0.5px solid #1d2846;
   background-color: #1a243d3e;
   border-radius: 2px;
@@ -42,6 +44,7 @@ body {
 }
 .infoContainer {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
 }
 .info {
@@ -88,7 +91,8 @@ td[colspan="2"] {
   text-align: right;
 }
 
-form {
+#newHabitForm,
+#newEntry {
   position: fixed;
   color: white;
   background-color: #1e2d52;
@@ -119,4 +123,20 @@ form button:hover {
   height: 100vh;
   background-color: rgb(15, 23, 42, 0.5);
   display: none;
+}
+
+/* #newEntry {
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  left: 40%;
+  bottom: 30%;
+  margin: auto;
+  color: white;
+  background-color: #1e2d52;
+  border-radius: 1em;
+}
+*/
+.entryForm button {
+  width: 100%;
 }
